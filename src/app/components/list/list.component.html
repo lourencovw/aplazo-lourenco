@@ -1,0 +1,25 @@
+<div class="container" *ngIf="title === 'character'">
+    <a routerLink="{{ '/' + title +'s/' + item.id}}" class="row border border-secondary" *ngFor="let item of data">
+        <div class="col border border-primary border-top-0 border-right-0" *ngIf="item.image">
+            <img class="w-25" src="{{item.image}}" alt="">
+        </div>
+        <div class="col border border-primary border-top-0 border-right-0">Name: {{item.name}}</div>
+        <div class="col border border-primary border-top-0 border-right-0">Status: {{item.status}}</div>
+        <div class="col border border-primary border-top-0 border-right-0">Species: {{item.species}}</div>
+        <div class="col border border-primary border-top-0 border-right-0">Gender: {{item.gender}}</div>
+    </a>
+</div>
+<div class="container" *ngIf="title === 'location'">
+    <a routerLink="{{ '/' + title +'s/' + item.id}}" class="row border border-secondary " *ngFor="let item of data">
+        <div class="col border border-primary border-top-0 border-right-0">Name: {{item.name}}</div>
+        <div class="col border border-primary border-top-0 border-right-0">Type: {{item.type}}</div>
+        <div class="col border border-primary border-top-0 border-right-0">Dimension: {{item.dimension}}</div>
+    </a>
+</div>
+<div class="container" *ngIf="title === 'episode'">
+    <a routerLink="{{ '/' + title +'s/' + item.id}}" class="row border border-secondary " *ngFor="let item of data">
+        <div class="col border border-primary border-top-0 border-right-0">Name: {{item.name}}</div>
+        <div class="col border border-primary border-top-0 border-right-0">Air Date: {{item.air_date}}</div>
+        <div class="col border border-primary border-top-0 border-right-0">Episode: {{item.episode}}</div>
+    </a>
+</div>

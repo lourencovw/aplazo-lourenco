@@ -1,0 +1,9 @@
+.container {
+    .row {
+        cursor: pointer;
+
+        &:hover {
+            background-color: azure;
+        }
+    }
+}
